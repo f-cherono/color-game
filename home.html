@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Game</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<style>
+    /* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #d8ee9d;
+  margin: 0;
+}
+
+#game-container {
+  text-align: center;
+  width: 90%;
+  max-width: 600px;
+}
+
+#colorBox {
+  width: 200px;
+  height: 200px;
+  margin: 20px auto;
+  border-radius: 10px;
+}
+
+#colorOptions {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 20px;
+}
+
+button {
+  font-size: 18px;
+  padding: 10px 20px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #45a049;
+}
+
+button:focus {
+  outline: none;
+}
+
+p {
+  font-size: 18px;
+}
+
+#gameStatus {
+  margin-top: 10px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fade-out {
+  animation: fadeOut 1s forwards;
+}
+
+@keyframes fadeOut {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+
+</style>
+
+<body>
+  <div id="game-container">
+    <div id="colorBox" data-testid="colorBox"></div>
+    <p id="gameInstructions" data-testid="gameInstructions">Guess the correct color!</p>
+    <div id="colorOptions" data-testid="colorOptions">
+      <!-- Color options will be added here dynamically -->
+    </div>
+    <p id="gameStatus" data-testid="gameStatus"></p>
+    <p id="score" data-testid="score">Score: 0</p>
+    <button id="newGameButton" data-testid="newGameButton">New Game</button>
+  </div>
+
+  
+
+
+  <script src="app.js"></script>
+  
+</body>
+</html>
